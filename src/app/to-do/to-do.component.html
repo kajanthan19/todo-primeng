@@ -57,7 +57,7 @@
             </ul>
         </div>
         <div class="col-10 right-content p-0 pr-1">
-            <p-orderList [value]="todoList" [dragdrop]="true" filterBy="title, tags" filterPlaceholder="Search Task" (onSelectionChange)="onSelectionChange()">
+            <p-orderList [value]="todoList" [dragdrop]="true" filterBy="title, tags" filterPlaceholder="Search Task">
                 <ng-template let-task let-i="index" pTemplate="item">
                     <div class="flex justify-content-between">
                         <div class="flex align-items-center">

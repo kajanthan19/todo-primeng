@@ -1,0 +1,30 @@
+
+.sidebar-heading{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        max-height: 45px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #3e4c59;
+    }
+
+    span{
+        margin: 0 1rem 0 0.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+}
+
+.menu-container{
+    overflow: auto;
+    flex: 1;
+    padding: 1rem 1.5rem 1rem 1rem;
+}
+.text-sm{
+    font-size: .875rem!important;
+}

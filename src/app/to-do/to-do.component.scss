@@ -1,0 +1,115 @@
+.card-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    height: 100% !important;
+    position: relative;
+
+    .left-content{
+        border-right: 1px solid #ababab33;
+        overflow: auto;
+        height: 100%;
+        transition: .4s;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 5px 0;
+            white-space: nowrap;
+            cursor: pointer;
+
+            a i {
+                margin-right: 10px;
+            }
+        }
+        .color{
+            background: unset;
+        }
+
+        .medium{
+            color: #f5d377;
+        }
+        .high{
+            color: #e29393;
+        }
+        .low{
+            color: #86b4ec;
+        }
+        .blocked{
+            color: #c496e9;
+        }
+        .update{
+            color: #87d8b6;
+        }
+
+        .dot{
+            font-size: .8rem;
+            padding: 0 2px;
+        }
+    }
+    .right-content{
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .action {
+        cursor: pointer;
+        width: 15px;
+    }
+
+    .selected{
+        color: #2da0ab;
+    }
+
+    .tags{
+        white-space: nowrap;
+         span{
+            padding: 3px 5px;
+            border-radius: 20px;
+            color: #000;
+            font-weight: 500;
+            font-size: .7rem;
+            margin: 0 2px;
+            user-select: none;
+         }
+
+        .medium {
+            background: #f5d377;
+        }
+
+        .high {
+            background: #e29393;
+        }
+
+        .low {
+            background: #86b4ec;
+        }
+
+        .blocked {
+            background: #c496e9;
+        }
+
+        .update {
+            background: #87d8b6;
+        }
+    }
+
+    .date {
+        min-width: 55px;
+        text-align: right;
+    }
+    .image-container{
+        width: 35px;
+        height: 35px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,188 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+
+
+body {
+    font-family: var(--font-family);
+    overflow: hidden;
+}
+
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: width .25s ease-out;
+    -moz-transition: width .25s ease-out;
+    -o-transition: width .25s ease-out;
+    transition: width .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1rem;
+    font-size: 1.2rem;
+}
+
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .min-sidebar {
+        // margin-left: 0!important;
+        width: 220px !important;
+    }
+
+    .max-sidebar {
+        width: 94px !important;
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+    }
+}
+
+@media (max-width: 767px) {
+    .min-sidebar {
+        width: 220px !important;
+    }
+
+    .max-sidebar {
+        width: 94px !important;
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+    }
+}
+
+.ro-container {
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 100px !important;
+    border-start-start-radius: 21px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.5rem 1rem;
+    margin-bottom: 16px;
+    box-shadow: 0 3px 4px #0000001a, 0 24px 36px #0000000a;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.p-component {
+    font-size: .8rem;
+}
+
+.p-button.p-button-sm{
+    font-size: .875rem;
+    padding: 0.4375rem 0.875rem;
+}
+
+.p-menu{
+    background: transparent;
+    border: 0px;
+}
+
+.p-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.p-menu .p-submenu-header{
+    color: #495057;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.p-menu .p-menuitem-link .p-menuitem-icon {
+    color: #3e4c59;
+    margin-right: 0.5rem;
+}
+
+.p-menu .p-menuitem-text{
+    line-height: 1;
+    color: #3e4c59;
+}
+
+.p-orderlist .p-orderlist-controls{
+    padding: 1rem;
+}
+.p-orderlist-controls{
+    display: none !important;
+}
+
+.p-orderlist, .p-orderlist .p-orderlist-list-container{
+    height: 100%;
+}
+
+.p-orderlist-list-container{
+    flex: 1 1 auto;
+}
+
+.p-orderlist .p-orderlist-filter-container{
+    border: 0;
+    padding: 1rem 1rem 0;
+}
+
+.p-orderlist-filter-container{
+    background: transparent;
+}
+
+.p-orderlist-filter{
+    display: flex;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.p-orderlist .p-orderlist-filter-container .p-orderlist-filter-icon{
+    color: #6c757d;
+}
+
+.p-orderlist-filter-icon{
+    position: unset;
+    top: unset;
+    margin-top: unset;
+    margin-right: 7px;
+}
+
+.p-orderlist .p-orderlist-list{
+    background: transparent;
+    border: 0;
+    height: calc(100% - 50px);
+}
+
+.p-orderlist .p-orderlist-list .p-orderlist-item{
+    border-bottom: 3px solid transparent;
+    border-top: 1px solid #ababab33;
+    transition: all .1s;
+    padding-right: 30px;
+    color:#3e4c59
+}
+
+.p-orderlist .p-orderlist-list .p-orderlist-item.p-highlight {
+    color: #495057;
+    background: #E3F2FD;
+}

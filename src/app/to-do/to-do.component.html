@@ -1,0 +1,86 @@
+<div class="card p-0 pt-2 h-full">
+    <div class="card-content">
+        <div class="col-2 left-content p-4">
+            <p-button label="Add New Task"  styleClass="p-button-sm w-full sticky top-0 z-2"></p-button>
+            <ul class="mt-4 sticky z-1">
+                <li [ngClass]="(selectedActivity=='My Tasks')?'selected': ''">
+                    <a class="nav-link active"  [routerLink]="['#/my-tasks']"  [routerLinkActive]="['active']" (click)="onFilter('My Tasks')">
+                        <i class="pi pi-envelope"></i><span>My Tasks</span>
+                    </a>
+                </li>
+
+                <li [ngClass]="(selectedActivity=='Important')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/completed']"  [routerLinkActive]="['active']"  (click)="onFilter('Important')">
+                        <i class="pi pi-star"></i><span>Important</span>
+                    </a>
+                </li>
+                <li [ngClass]="(selectedActivity=='Completed')?'selected': ''">
+                    <a class="nav-link"  [routerLink]="['#/completed']"  [routerLinkActive]="['active']" (click)="onFilter('Completed')">
+                        <i class="pi pi-check-circle"></i><span>Completed</span>
+                    </a>
+                </li>
+                <li [ngClass]="(selectedActivity=='Deleted')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/deleted']"  [routerLinkActive]="['active']" (click)="onFilter('Deleted')">
+                        <i class="pi pi-trash"></i><span>Deleted</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-4 text-sm">TAGS</div>
+
+            <ul>
+                <li [ngClass]="(selectedKey=='High')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/tags/high']" href="#/todo/tags/high"  (click)="onFilter('Tags', 'High')">
+                        <i class="color dot high pi pi-circle-on"></i><span>High</span>
+                    </a>
+                </li>
+                <li [ngClass]="(selectedKey=='High')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/tags/medium']" href="#/todo/tags/medium"  (click)="onFilter('Tags','Medium')">
+                        <i class="color dot medium pi pi-circle-on"></i><span>Medium</span>
+                    </a>
+                </li>
+                <li [ngClass]="(selectedKey=='Low')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/tags/low']" href="#/todo/tags/low"  (click)="onFilter('Tags','Low')">
+                        <i class="color dot low pi pi-circle-on"></i><span>Low</span>
+                    </a>
+                </li>
+                <li [ngClass]="(selectedKey=='Blocked')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/tags/blocked']" href="#/todo/tags/blocked"  (click)="onFilter('Tags','Blocked')">
+                        <i class="blocked color dot pi pi-circle-on"></i><span>Blocked</span>
+                    </a>
+                </li>
+                <li [ngClass]="(selectedKey=='Update')?'selected': ''">
+                    <a class="nav-link" [routerLink]="['#/tags/update']" href="javascript: void(0)"  (click)="onFilter('Tags','Update')">
+                        <i class="color dot pi pi-circle-on update"></i><span>Update</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-10 right-content p-0 pr-1">
+            <p-orderList [value]="todoList" [dragdrop]="true" filterBy="title, tags" filterPlaceholder="Search Task" (onSelectionChange)="onSelectionChange()">
+                <ng-template let-task let-i="index" pTemplate="item">
+                    <div class="flex justify-content-between">
+                        <div class="flex align-items-center">
+                            <i class="me-2 action pi" [ngClass]="task.starred ? 'pi-star-fill selected ': 'pi-star'" (click)="onChangeStatus('starred', task.id)"></i>
+                            <i class="action pi" [ngClass]="task.completed ? 'pi-check-circle selected ': 'pi-circle'" (click)="onChangeStatus('completed', task.id)"></i>
+                            <div class="ms-2 list-detail">{{task.title}}</div>
+                        </div>
+                        <div class="flex align-items-center text-left">
+                            <div class="tags">
+                                <span [ngClass]="tag" *ngFor="let tag of task.tags;">{{tag}}</span>
+                            </div>
+                            <span class="date">{{task.due_date | date: 'MMM YYYY'}}</span>
+                            <div class="ms-2 image-container"><img pTooltip="{{task.owner.first}}" tooltipposition="left" class="p-element image"
+                                    src="assets/images/{{task.id}}.png" alt="Learn about Polymer">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-orderList>
+        </div>
+
+        <p-sidebar [(visible)]="sidebarVisible" position="right">
+            <h3>Detail View</h3>
+        </p-sidebar>
+    </div>
+</div>

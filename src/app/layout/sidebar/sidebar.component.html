@@ -1,0 +1,13 @@
+ <!-- Sidebar -->
+ <div class="bg-light border-right" id="sidebar-wrapper"  [ngClass]="status ? 'max-sidebar' : 'min-sidebar'">
+    <div class="sidebar-heading">
+      <img class="logo" src="../../../assets/logo-dark.png" alt="" (click)="onHomePage()" style="cursor: pointer !important;">
+      <span>Sensei</span>
+    </div>
+    <div class="menu-container">
+        <!-- <p-toast></p-toast> -->
+        <p-menu [model]="menuItems"></p-menu>
+    </div>
+
+  </div>
+  <!-- /#sidebar-wrapper -->

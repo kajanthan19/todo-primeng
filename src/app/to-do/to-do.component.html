@@ -4,23 +4,23 @@
             <p-button label="Add New Task"  styleClass="p-button-sm w-full sticky top-0 z-2"></p-button>
             <ul class="mt-4 sticky z-1">
                 <li [ngClass]="(selectedActivity=='My Tasks')?'selected': ''">
-                    <a class="nav-link active"  [routerLink]="['#/my-tasks']"  [routerLinkActive]="['active']" (click)="onFilter('My Tasks')">
+                    <a class="nav-link active" href="javascript: void(0)" (click)="onFilter('My Tasks')">
                         <i class="pi pi-envelope"></i><span>My Tasks</span>
                     </a>
                 </li>
 
                 <li [ngClass]="(selectedActivity=='Important')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/completed']"  [routerLinkActive]="['active']"  (click)="onFilter('Important')">
+                    <a class="nav-link" href="javascript: void(0)"  (click)="onFilter('Important')">
                         <i class="pi pi-star"></i><span>Important</span>
                     </a>
                 </li>
                 <li [ngClass]="(selectedActivity=='Completed')?'selected': ''">
-                    <a class="nav-link"  [routerLink]="['#/completed']"  [routerLinkActive]="['active']" (click)="onFilter('Completed')">
+                    <a class="nav-link"  href="javascript: void(0)" (click)="onFilter('Completed')">
                         <i class="pi pi-check-circle"></i><span>Completed</span>
                     </a>
                 </li>
                 <li [ngClass]="(selectedActivity=='Deleted')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/deleted']"  [routerLinkActive]="['active']" (click)="onFilter('Deleted')">
+                    <a class="nav-link" href="javascript: void(0)" (click)="onFilter('Deleted')">
                         <i class="pi pi-trash"></i><span>Deleted</span>
                     </a>
                 </li>
@@ -30,27 +30,27 @@
 
             <ul>
                 <li [ngClass]="(selectedKey=='High')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/tags/high']" href="#/todo/tags/high"  (click)="onFilter('Tags', 'High')">
+                    <a class="nav-link" href="javascript: void(0)"  (click)="onFilter('Tags', 'High')">
                         <i class="color dot high pi pi-circle-on"></i><span>High</span>
                     </a>
                 </li>
                 <li [ngClass]="(selectedKey=='High')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/tags/medium']" href="#/todo/tags/medium"  (click)="onFilter('Tags','Medium')">
+                    <a class="nav-link" href="javascript: void(0)"  (click)="onFilter('Tags','Medium')">
                         <i class="color dot medium pi pi-circle-on"></i><span>Medium</span>
                     </a>
                 </li>
                 <li [ngClass]="(selectedKey=='Low')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/tags/low']" href="#/todo/tags/low"  (click)="onFilter('Tags','Low')">
+                    <a class="nav-link" href="javascript: void(0)" (click)="onFilter('Tags','Low')">
                         <i class="color dot low pi pi-circle-on"></i><span>Low</span>
                     </a>
                 </li>
                 <li [ngClass]="(selectedKey=='Blocked')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/tags/blocked']" href="#/todo/tags/blocked"  (click)="onFilter('Tags','Blocked')">
+                    <a class="nav-link" href="javascript: void(0)"  (click)="onFilter('Tags','Blocked')">
                         <i class="blocked color dot pi pi-circle-on"></i><span>Blocked</span>
                     </a>
                 </li>
                 <li [ngClass]="(selectedKey=='Update')?'selected': ''">
-                    <a class="nav-link" [routerLink]="['#/tags/update']" href="javascript: void(0)"  (click)="onFilter('Tags','Update')">
+                    <a class="nav-link" href="javascript: void(0)"  (click)="onFilter('Tags','Update')">
                         <i class="color dot pi pi-circle-on update"></i><span>Update</span>
                     </a>
                 </li>

@@ -30,7 +30,7 @@ export class SidebarComponent implements OnInit {
               {
                   label: 'Todo',
                   icon: 'pi pi-check-circle',
-                  url: 'todo'
+                  routerLink: 'todo'
               },
           ]
       },
